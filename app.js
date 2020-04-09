@@ -60,6 +60,19 @@ JABtn.addEventListener('click', () => {
   */
 })
 
+window.addEventListener("load", function() {
+  document.getElementById("hello").addEventListener("click", function() {
+      document.getElementById("message").innerHTML += "Hello, ";
+  });
+  document.getElementById("bye").addEventListener("click", function() {
+      document.getElementById("message").innerHTML += "Bye, ";
+  });
+  document.getElementById("exit").addEventListener("click", function() {
+      window.history.back();
+  });
+});
+
+
 // video 操作
 video.addEventListener('loadedmetadata', function() {
   videoDuration.textContent = secondsToTimeCode(video.duration);

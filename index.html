@@ -1,8 +1,9 @@
-<!-- index.html -->
+<!DOCTYPE html>
 <html>
 
 <head>
-  <!-- manifest.jsonを呼び出しています -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="./manifest.json">
   <script>
     // service workerが有効なら、service-worker.js を登録します
@@ -21,20 +22,27 @@
     <!--button id="js-JABtn" class="btn">日本語</button-->
     <!--button id="js-ENBtn" class="btn">English</button-->
 
+    <div id="main">
+      <button type="button" id="hello">Hello</button>
+      <button type="button" id="bye">Bye</button>
+      <div id="message"></div>
+      <button type="button" id="exit">Exit</button>
+    </div>
+
     <div id="videoContainer">
-      <video id="video" src="example.mp4" alt="サンプル動画" width="700" ></video>
+      <video id="video" src="example.mp4" alt="サンプル動画" width="700"></video>
       <div id="videoControls">
         <button id="playPauseButton"></button>
         <div id="videoCurrentTime"></div>
         <div id="videoDuration"></div>
-        <div id="videoProgressBar"></div>    
+        <div id="videoProgressBar"></div>
       </div>
     </div>
-    
+
     <!--video id="js-media" alt="サンプル動画" width="700" playsinline muted controls>
     <source src="./example.mp4">
     </video-->
-</section>
+  </section>
 
   <script src="app.js"></script>
 

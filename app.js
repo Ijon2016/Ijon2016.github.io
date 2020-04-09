@@ -31,16 +31,19 @@ JABtn.addEventListener('click', () => {
   //setGame()
   isPlaying = true
   //tapBtn.disabled = false
-  JABtn.style.display = 'none'
+  //JABtn.style.display = 'none'
 
-  const ADMedia = document.getElementById('js-media').style.visibility = "hidden";
+  var ADMedia = document.getElementById('js-media').style.visibility = "hidden";
 
-	if(ADMedia.style.visibility=="visible"){
+  ADMedia.play();
+  /*
+  if(ADMedia.style.visibility=="visible"){
 		// hiddenで非表示
 		ADMedia.style.visibility ="hidden";
 	}else{
 		// visibleで表示
 		ADMedia.style.visibility ="visible";
+  */
   /*
   const timer = setInterval( () => {
     time -= 10

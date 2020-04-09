@@ -41,7 +41,7 @@ JABtn.addEventListener('click', () => {
 		// visibleで表示
 		ADMedia.style.visibility ="visible";
 
-    ADMedia.play();
+  //  ADMedia.play();
 
   /*
   const timer = setInterval( () => {

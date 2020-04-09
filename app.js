@@ -2,7 +2,8 @@
 let isPlaying = false
 let tapCount, time = 0
 const tapBtn    = document.getElementById('js-tapBtn')
-const startBtn  = document.getElementById('js-startBtn')
+const JABtn  = document.getElementById('JABtn')
+const ENBtn  = document.getElementById('ENBtn')
 const countText = document.getElementById('js-count')
 const timeText  = document.getElementById('js-time')
 
@@ -23,11 +24,11 @@ tapBtn.addEventListener('click', () => {
 })
 
 // STARTボタンを押してゲームをスタートさせる
-startBtn.addEventListener('click', () => {
+JABtn.addEventListener('click', () => {
   setGame()
   isPlaying = true
   tapBtn.disabled = false
-  startBtn.style.display = 'none'
+  JABtn.style.display = 'none'
 
   const timer = setInterval( () => {
     time -= 10
@@ -36,8 +37,8 @@ startBtn.addEventListener('click', () => {
     if (time === 0) {
       clearInterval(timer)
       isPlaying = false
-      startBtn.style.display = 'inline-block'
-      startBtn.innerText = 'もう一回'
+      JABtn.style.display = 'inline-block'
+      JABtn.innerText = 'もう一回'
     }
   }, 10)
 })

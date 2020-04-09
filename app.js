@@ -67,3 +67,33 @@ video.addEventListener('loadedmetadata', function() {
   videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
 });
 
+playPauseButton.addEventListener('click', function(event) {
+  event.stopPropagation();
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+video.addEventListener('play', function() {
+  playPauseButton.classList.add('paused');
+});
+
+video.addEventListener('pause', function() {
+  playPauseButton.classList.remove('paused');
+});
+
+video.addEventListener('timeupdate', function() {
+  if (videoControls.classList.contains('visible')) {
+    videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
+    videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
+  }
+}
+
+video.addEventListener('ended', function() {
+  playPauseButton.classList.remove('paused');
+  video.currentTime = 0;
+});
+
+

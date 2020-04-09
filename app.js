@@ -27,6 +27,18 @@ tapBtn.addEventListener('click', () => {
 })
 */
 
+function dispVideo(){
+ 
+	var f = document.fm;
+ 
+	for(var i = 0 ; i < f.elements.length ; i++){
+		if(f.elements[i].type=='button'){
+			alert(i + '番目のボタン名は' 
+				+ f.elements[i].value + 'です' );
+		}
+	}	
+}
+
 // ボタンで可視化
 JABtn.addEventListener('click', () => {
   //setGame()

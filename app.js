@@ -4,6 +4,7 @@ let isPlaying = false
 //const tapBtn    = document.getElementById('js-tapBtn')
 const JABtn  = document.getElementById('js-JABtn');
 const ENBtn  = document.getElementById('js-ENBtn');
+var ADMedia = document.getElementById('js-media').style.visibility = "hidden";
 //const timeText  = document.getElementById('js-time')
 
 // ゲームの初期値設定
@@ -32,8 +33,6 @@ JABtn.addEventListener('click', () => {
   isPlaying = true
   //tapBtn.disabled = false
   //JABtn.style.display = 'none'
-
-  var ADMedia = document.getElementById('js-media').style.visibility = "hidden";
 
   if(ADMedia.style.visibility=="visible"){
 		// hiddenで非表示

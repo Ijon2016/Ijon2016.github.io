@@ -5,6 +5,7 @@ let isPlaying = false
 const JABtn  = document.getElementById('js-JABtn')
 const ENBtn  = document.getElementById('js-ENBtn')
 const ADMedia = document.getElementById('js-media')
+ADMedia.style.visibility = "hidden";
 //const timeText  = document.getElementById('js-time')
 
 // ゲームの初期値設定
@@ -27,13 +28,19 @@ tapBtn.addEventListener('click', () => {
 })
 */
 
-// STARTボタンを押してゲームをスタートさせる
+// ボタンで可視化
 JABtn.addEventListener('click', () => {
   //setGame()
   isPlaying = true
   //tapBtn.disabled = false
   JABtn.style.display = 'none'
 
+	if(ADMedia.style.visibility=="visible"){
+		// hiddenで非表示
+		ADMedia.style.visibility ="hidden";
+	}else{
+		// visibleで表示
+		ADMedia.style.visibility ="visible";
   /*
   const timer = setInterval( () => {
     time -= 10

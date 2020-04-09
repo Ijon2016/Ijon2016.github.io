@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="./manifest.json">
-  <script>
+  <script src="app.js"></script>
+  <!--script>
     // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function () { console.log('Service Worker Registered'); });
     }
-  </script>
+  </script-->
   <title>動画再生</title>
   <link rel="stylesheet" type="text/css" href="app.css">
 </head>
@@ -29,7 +30,7 @@
       <button type="button" id="exit">Exit</button>
     </div>
 
-    <div id="videoContainer">
+    <!--div id="videoContainer">
       <video id="video" src="example.mp4" alt="サンプル動画" width="700"></video>
       <div id="videoControls">
         <button id="playPauseButton"></button>
@@ -37,14 +38,22 @@
         <div id="videoDuration"></div>
         <div id="videoProgressBar"></div>
       </div>
-    </div>
+    </div-->
 
     <!--video id="js-media" alt="サンプル動画" width="700" playsinline muted controls>
     <source src="./example.mp4">
     </video-->
   </section>
 
-  <script src="app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
+    </script>
+
 
 </body>
 

@@ -35,15 +35,15 @@ JABtn.addEventListener('click', () => {
 
   var ADMedia = document.getElementById('js-media').style.visibility = "hidden";
 
-  ADMedia.play();
-  /*
   if(ADMedia.style.visibility=="visible"){
 		// hiddenで非表示
 		ADMedia.style.visibility ="hidden";
 	}else{
 		// visibleで表示
 		ADMedia.style.visibility ="visible";
-  */
+
+    ADMedia.play();
+
   /*
   const timer = setInterval( () => {
     time -= 10

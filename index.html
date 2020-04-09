@@ -3,9 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- アドレスバー等のブラウザのUIを非表示 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- ホーム画面に表示されるアプリ名 -->
+  <meta name="apple-mobile-web-app-title" content="TAP10">
+  <!-- ホーム画面に表示されるアプリアイコン -->
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="./manifest.json">
-  <script src="app.js"></script>
+  <!-- ServiceWorkerの登録 -->
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  }
+  </script>
   <!--script>
     // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
@@ -23,13 +41,6 @@
     <!--button id="js-JABtn" class="btn">日本語</button-->
     <!--button id="js-ENBtn" class="btn">English</button-->
 
-    <div id="main">
-      <button type="button" id="hello">Hello</button>
-      <button type="button" id="bye">Bye</button>
-      <div id="message"></div>
-      <button type="button" id="exit">Exit</button>
-    </div>
-
     <!--div id="videoContainer">
       <video id="video" src="example.mp4" alt="サンプル動画" width="700"></video>
       <div id="videoControls">
@@ -43,17 +54,15 @@
     <!--video id="js-media" alt="サンプル動画" width="700" playsinline muted controls>
     <source src="./example.mp4">
     </video-->
+    <button id="js-tapBtn" class="btn-tap" disabled>
+      <span id="js-count"></span><br>タップ!!
+    </button>
+    <div class="time">残り時間 <span id="js-time"></span> 秒</div>
+    <button id="js-startBtn" class="btn">START</button>
+    
   </section>
 
-
-  <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener("load", function() {
-            navigator.serviceWorker.register('sw.js');
-        });
-    }
-    </script>
-
+  <script src="app.js"></script>
 
 </body>
 

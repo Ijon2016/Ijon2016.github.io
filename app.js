@@ -1,14 +1,12 @@
 // 変数定義
 let isPlaying = false
-//let tapCount, time = 0
-//const tapBtn    = document.getElementById('js-tapBtn')
-const JABtn  = document.getElementById('js-JABtn');
-//const ENBtn  = document.getElementById('js-ENBtn');
-//var ADMedia = document.getElementById('js-media').style.visibility = "hidden";
-//const timeText  = document.getElementById('js-time')
+let tapCount, time = 0
+const tapBtn    = document.getElementById('js-tapBtn')
+const startBtn  = document.getElementById('js-startBtn')
+const countText = document.getElementById('js-count')
+const timeText  = document.getElementById('js-time')
 
 // ゲームの初期値設定
-/*
 const setGame = () => {
   tapCount = 0
   time = 10000
@@ -16,36 +14,21 @@ const setGame = () => {
   timeText.innerHTML = time / 1000
 }
 setGame()
-*/
 
 // タップした時にカウントを増やす
-/*
 tapBtn.addEventListener('click', () => {
   if (!isPlaying) return false
   tapCount++
   countText.innerText = tapCount
 })
-*/
 
-// ボタンで可視化
-JABtn.addEventListener('click', () => {
-  //setGame()
+// STARTボタンを押してゲームをスタートさせる
+startBtn.addEventListener('click', () => {
+  setGame()
   isPlaying = true
-  //tapBtn.disabled = false
-  //JABtn.style.display = 'none'
+  tapBtn.disabled = false
+  startBtn.style.display = 'none'
 
-  /*
-  if(ADMedia.style.visibility=="visible"){
-		// hiddenで非表示
-		ADMedia.style.visibility ="hidden";
-	}else{
-		// visibleで表示
-		ADMedia.style.visibility ="visible";
-*/
-
-  //  ADMedia.play();
-
-  /*
   const timer = setInterval( () => {
     time -= 10
     timeText.innerHTML = (time / 1000).toFixed(2)
@@ -57,56 +40,4 @@ JABtn.addEventListener('click', () => {
       startBtn.innerText = 'もう一回'
     }
   }, 10)
-  */
 })
-
-window.addEventListener("load", function() {
-  document.getElementById("hello").addEventListener("click", function() {
-      document.getElementById("message").innerHTML += "Hello, ";
-  });
-  document.getElementById("bye").addEventListener("click", function() {
-      document.getElementById("message").innerHTML += "Bye, ";
-  });
-  document.getElementById("exit").addEventListener("click", function() {
-      window.history.back();
-  });
-});
-
-
-// video 操作
-video.addEventListener('loadedmetadata', function() {
-  videoDuration.textContent = secondsToTimeCode(video.duration);
-  videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-  videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
-});
-
-playPauseButton.addEventListener('click', function(event) {
-  event.stopPropagation();
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
-
-video.addEventListener('play', function() {
-  playPauseButton.classList.add('paused');
-});
-
-video.addEventListener('pause', function() {
-  playPauseButton.classList.remove('paused');
-});
-
-video.addEventListener('timeupdate', function() {
-  if (videoControls.classList.contains('visible')) {
-    videoCurrentTime.textContent = secondsToTimeCode(video.currentTime);
-    videoProgressBar.style.transform = `scaleX(${video.currentTime / video.duration})`;
-  }
-}
-
-video.addEventListener('ended', function() {
-  playPauseButton.classList.remove('paused');
-  video.currentTime = 0;
-});
-
-

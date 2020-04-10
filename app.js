@@ -3,6 +3,7 @@ let isPlaying = false
 //let tapCount, time = 0
 //const tapBtn    = document.getElementById('js-tapBtn')
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
+const ADMedia  = document.getElementById('Jvideo')
 const JABtn = document.getElementById('JABtn')
 const ENBtn = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
@@ -33,7 +34,7 @@ JABtn.addEventListener('click', () => {
   //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
 
-  var v = document.getElementById("Jvideo")
+//  var v = document.getElementById("Jvideo")
   v.innerHTML = ""
   v.play()
 

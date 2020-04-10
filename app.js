@@ -33,7 +33,7 @@ JABtn.addEventListener('click', () => {
 //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
 
-  var v = document.getElementById("Jvideo")
+  var v = document.getElementById("Jvideo").style.visibility = 'visible'
   v.play()
 
 //  const timer = setInterval( () => {
@@ -58,5 +58,5 @@ ENBtn.addEventListener('click', () => {
   
     var v = document.getElementById("Evideo")
     v.play()
-    
+
   })

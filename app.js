@@ -37,7 +37,7 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
 
   var v = document.getElementById("Jvideo")
-//  v.innerHTML = ""
+  //  v.innerHTML = ""
   v.play()
 
   /*

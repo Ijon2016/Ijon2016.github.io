@@ -1,12 +1,14 @@
 // 変数定義
 let isPlaying = false
-let tapCount, time = 0
-const tapBtn    = document.getElementById('js-tapBtn')
+//let tapCount, time = 0
+//const tapBtn    = document.getElementById('js-tapBtn')
+const ADMedia  = document.getElementById('js-media')
 const JABtn  = document.getElementById('JABtn')
 const ENBtn  = document.getElementById('ENBtn')
-const countText = document.getElementById('js-count')
-const timeText  = document.getElementById('js-time')
+//const countText = document.getElementById('js-count')
+//const timeText  = document.getElementById('js-time')
 
+/*
 // ゲームの初期値設定
 const setGame = () => {
   tapCount = 0
@@ -22,10 +24,11 @@ tapBtn.addEventListener('click', () => {
   tapCount++
   countText.innerText = tapCount
 })
+*/
 
 // STARTボタンを押してゲームをスタートさせる
 JABtn.addEventListener('click', () => {
-  setGame()
+//  setGame()
   isPlaying = true
   tapBtn.disabled = false
   JABtn.style.display = 'none'

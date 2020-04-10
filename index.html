@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="./manifest.json">
   <!-- ServiceWorkerの登録 -->
- <!--script>
+  <!--script>
   if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
         .then((reg) => {
@@ -35,9 +35,6 @@
   <section class="container">
     <h1>言語を選択してください。</h1>
 
-    <!--button id="js-JABtn" class="btn">日本語</button-->
-    <!--button id="js-ENBtn" class="btn">English</button-->
-
     <!--div id="videoContainer">
       <video id="video" src="example.mp4" alt="サンプル動画" width="700"></video>
       <div id="videoControls">
@@ -48,13 +45,16 @@
       </div>
     </div-->
 
-    <!--video id="js-media" alt="サンプル動画" width="700" playsinline muted controls>
-    <source src="./example.mp4">
-    </video-->
-    <button id="js-tapBtn" class="btn-tap" disabled>
+    <div id="js-media">
+      <video id="video" alt="サンプル動画" width="700" playsinline muted controls>
+        <source src="./example.mp4">
+      </video>
+    </div>
+
+    <!--button id="js-tapBtn" class="btn-tap" disabled>
       <span id="js-count"></span><br>タップ!!
-    </button>
-    <div class="time">残り時間 <span id="js-time"></span> 秒</div>
+    </button-->
+    <!--div class="time">残り時間 <span id="js-time"></span> 秒</div-->
     <button id="JABtn" class="btn">日本語</button>
     <button id="ENBtn" class="btn">English</button>
 

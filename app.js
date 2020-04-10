@@ -31,7 +31,7 @@ JABtn.addEventListener('click', () => {
 //  setGame()
   isPlaying = true
 //  tapBtn.disabled = false
-  JABtn.style.display = 'none'
+  ENBtn.style.display = 'none'
 
   ADMedia.play()
 

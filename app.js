@@ -34,6 +34,8 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
 
   var v = document.getElementById("Jvideo").style.visibility = 'visible'
+  v.innerHTML = "";
+  v.pause()
   v.play()
 
 //  const timer = setInterval( () => {

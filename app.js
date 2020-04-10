@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const tapBtn    = document.getElementById('js-tapBtn')
-const ADMedia  = document.getElementById('js-media')
+const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
 const JABtn  = document.getElementById('JABtn')
 const ENBtn  = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
@@ -26,7 +26,7 @@ tapBtn.addEventListener('click', () => {
 })
 */
 
-// STARTボタンを押してゲームをスタートさせる
+// 日本語ボタン
 JABtn.addEventListener('click', () => {
 //  setGame()
   isPlaying = true
@@ -35,7 +35,7 @@ JABtn.addEventListener('click', () => {
 
   var v = document.getElementById("Jvideo")
   v.play()
-  
+
 //  const timer = setInterval( () => {
 //    time -= 10
 //    timeText.innerHTML = (time / 1000).toFixed(2)
@@ -48,3 +48,15 @@ JABtn.addEventListener('click', () => {
 //    }
 //  }, 10)
 })
+
+// Englishボタン
+ENBtn.addEventListener('click', () => {
+  //  setGame()
+    isPlaying = true
+  //  tapBtn.disabled = false
+    JABtn.style.display = 'none'
+  
+    var v = document.getElementById("Evideo")
+    v.play()
+    
+  })

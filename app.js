@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const tapBtn    = document.getElementById('js-tapBtn')
-const ADMedia  = document.getElementById('video')
+const ADMedia  = document.getElementById('js-media')
 const JABtn  = document.getElementById('JABtn')
 const ENBtn  = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
@@ -33,8 +33,9 @@ JABtn.addEventListener('click', () => {
 //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
 
-  ADMedia.play()
-
+  var v = document.getElementById("Jvideo")
+  v.play()
+  
 //  const timer = setInterval( () => {
 //    time -= 10
 //    timeText.innerHTML = (time / 1000).toFixed(2)

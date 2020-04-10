@@ -6,18 +6,18 @@ let isPlaying = false
 const JABtn  = document.getElementById('JABtn')
 const ENBtn  = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
-//const timeText  = document.getElementById('js-time')
+const timeText  = document.getElementById('js-time')
 
-/*
-// ゲームの初期値設定
+// 再生時間の初期値設定
 const setGame = () => {
-  tapCount = 0
-  time = 10000
-  countText.innerText = tapCount
-  timeText.innerHTML = time / 1000
-}
+    tapCount = 0
+    time = 10000
+    countText.innerText = tapCount
+    timeText.innerHTML = time / 1000
+  }
 setGame()
 
+/*
 // タップした時にカウントを増やす
 tapBtn.addEventListener('click', () => {
   if (!isPlaying) return false
@@ -37,17 +37,17 @@ JABtn.addEventListener('click', () => {
   v.innerHTML = ""
   v.play()
 
-//  const timer = setInterval( () => {
-//    time -= 10
-//    timeText.innerHTML = (time / 1000).toFixed(2)
+  const timer = setInterval( () => {
+    time -= 10
+    timeText.innerHTML = (time / 1000).toFixed(2)
 
-//    if (time === 0) {
-//      clearInterval(timer)
+    if (time === 0) {
+      clearInterval(timer)
 //      isPlaying = false
 //      JABtn.style.display = 'inline-block'
 //      JABtn.innerText = 'もう一回'
-//    }
-//  }, 10)
+    }
+  }, 10)
 })
 
 // Englishボタン

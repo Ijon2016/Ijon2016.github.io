@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const tapBtn    = document.getElementById('js-tapBtn')
-const ADMedia  = document.getElementById('js-media')
+const ADMedia  = document.getElementById('video')
 const JABtn  = document.getElementById('JABtn')
 const ENBtn  = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
@@ -30,18 +30,20 @@ tapBtn.addEventListener('click', () => {
 JABtn.addEventListener('click', () => {
 //  setGame()
   isPlaying = true
-  tapBtn.disabled = false
+//  tapBtn.disabled = false
   JABtn.style.display = 'none'
 
-  const timer = setInterval( () => {
-    time -= 10
-    timeText.innerHTML = (time / 1000).toFixed(2)
+  ADMedia.play()
 
-    if (time === 0) {
-      clearInterval(timer)
-      isPlaying = false
-      JABtn.style.display = 'inline-block'
-      JABtn.innerText = 'もう一回'
-    }
-  }, 10)
+//  const timer = setInterval( () => {
+//    time -= 10
+//    timeText.innerHTML = (time / 1000).toFixed(2)
+
+//    if (time === 0) {
+//      clearInterval(timer)
+//      isPlaying = false
+//      JABtn.style.display = 'inline-block'
+//      JABtn.innerText = 'もう一回'
+//    }
+//  }, 10)
 })

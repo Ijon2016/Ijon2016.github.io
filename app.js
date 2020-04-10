@@ -7,9 +7,10 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn')
 const ENBtn = document.getElementById('ENBtn')
 //const countText = document.getElementById('js-count')
-const timeText = document.getElementById('js-time')
+//const timeText = document.getElementById('js-time')
 
 // 再生時間の初期値設定
+/*
 const setGame = () => {
   tapCount = 0
   time = 10000
@@ -17,6 +18,7 @@ const setGame = () => {
   timeText.innerHTML = time / 1000
 }
 setGame()
+*/
 
 /*
 // タップした時にカウントを増やす
@@ -34,10 +36,11 @@ JABtn.addEventListener('click', () => {
   //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
 
-//  var v = document.getElementById("Jvideo")
+  var v = document.getElementById("Jvideo")
 //  v.innerHTML = ""
   v.play()
 
+  /*
   const timer = setInterval(() => {
     time -= 10
     timeText.innerHTML = (time / 1000).toFixed(2)
@@ -49,6 +52,7 @@ JABtn.addEventListener('click', () => {
       //      JABtn.innerText = 'もう一回'
     }
   }, 10)
+  */
 })
 
 // Englishボタン

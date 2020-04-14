@@ -6,6 +6,7 @@ let isPlaying = false
 //const ADMedia  = document.getElementById('Jvideo')
 const JABtn = document.getElementById('JABtn')
 const ENBtn = document.getElementById('ENBtn')
+var MediaName = 
 //const countText = document.getElementById('js-count')
 //const timeText = document.getElementById('js-time')
 
@@ -36,9 +37,10 @@ JABtn.addEventListener('click', () => {
   //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
 
-  var v = document.getElementById("Jvideo")
-  //  v.innerHTML = ""
-  v.play()
+  var v = document.getElementById("video")
+  v.src = "./テリトリアPV.mp4";
+  v.load();
+  v.play();
 
   /*
   const timer = setInterval(() => {
@@ -62,7 +64,9 @@ ENBtn.addEventListener('click', () => {
   //  tapBtn.disabled = false
   JABtn.style.display = 'none'
 
-  var v = document.getElementById("Jvideo")
-  v.play()
+  var v = document.getElementById("video")
+  v.src = "./PicoCELA PV.mp4";
+  v.load();
+  v.play();
 
 })

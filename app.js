@@ -46,23 +46,23 @@ const timer = setInterval( () => {
 */
 
 // 日本語ボタン
-JABtn.addEventListener('click', () => {
+async function JABtn.addEventListener('click', () => {
   //  setGame()
   isPlaying = true
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
   const timer = setInterval(() => {
-    time -= 10
+    time -= 1
     timeText.innerHTML = (time / 100).toFixed(1)
 
     if (time === 0) {
       clearInterval(timer)
       isPlaying = false
-      JABtn.style.display = 'inline-block'
-      JABtn.innerText = 'もう一回'
+    //  JABtn.style.display = 'inline-block'
+    //  JABtn.innerText = 'もう一回'
     }
-  }, 10)
+  }, 1)
 
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";

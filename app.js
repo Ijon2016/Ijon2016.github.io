@@ -45,20 +45,6 @@ const timer = setInterval( () => {
 }, 10)(((
 */
 
-/*
-function countdown(){
-  time -= 1
-  timeText.innerHTML = (time / 10).toFixed(1)
-
-  if (time === 0) {
-    clearInterval(timer)
-    isPlaying = false
-  //  JABtn.style.display = 'inline-block'
-  //  JABtn.innerText = 'もう一回'
-  }
-}
-*/
-
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   //  setGame()
@@ -70,11 +56,11 @@ JABtn.addEventListener('click', () => {
   v.src = "./テリトリアPV.mp4";
   v.load();
   v.play();
-  //現在の再生位置（秒）を表示
+  //残り秒数を表示
 	v.addEventListener("timeupdate", function(){
-		timeText.innerHTML = v.duration - v.currentTime;
+		timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
 	}, false);
-  //timer = setInterval(countdown(), 100);
+
 })
 
 // Englishボタン

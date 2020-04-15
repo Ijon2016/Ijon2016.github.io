@@ -67,10 +67,8 @@ JABtn.addEventListener('click', () => {
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
   v.load();
-//  async () => {
-    v.play();
-    timer = setInterval(countdown(), 100);
-//  }
+  //v.play();
+  timer = setInterval(countdown(), 100);
 })
 
 // Englishボタン

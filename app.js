@@ -7,9 +7,9 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-var time = 3000
+var time = 300
 var timeText = document.getElementById('js-time');
-timeText.innerHTML = time / 100
+timeText.innerHTML = time / 10
 
 // 再生時間の初期値設定
 /*
@@ -47,7 +47,7 @@ const timer = setInterval( () => {
 
 function countdown(){
   time -= 1
-  timeText.innerHTML = (time / 100).toFixed(1)
+  timeText.innerHTML = (time / 10).toFixed(1)
 
   if (time === 0) {
     clearInterval(timer)

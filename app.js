@@ -7,8 +7,8 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-const time = 1000
-const timeText = document.getElementById('js-time');
+var time = 1000
+var timeText = document.getElementById('js-time');
 timeText.innerHTML = time / 100
 
 // 再生時間の初期値設定
@@ -50,24 +50,24 @@ JABtn.addEventListener('click', () => {
   //  setGame()
   isPlaying = true
   ENBtn.style.display = 'none'
-  timeText.innerHTML = time / 100;
+  //timeText.innerHTML = time / 100;
+
+  const timer = setInterval(() => {
+    time -= 10
+    timeText.innerHTML = (time / 100).toFixed(1)
+
+    if (time === 0) {
+      clearInterval(timer)
+      isPlaying = false
+      JABtn.style.display = 'inline-block'
+      JABtn.innerText = 'もう一回'
+    }
+  }, 10)
 
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
   v.load();
   v.play();
-
-  const timer = setInterval( () => {
-    time -= 10
-    timeText.innerHTML = (time / 100).toFixed(1)
-  
-    if (time === 0) {
-      clearInterval(timer)
-      isPlaying = false
-      startBtn.style.display = 'inline-block'
-      startBtn.innerText = 'もう一回'
-    }
-  }, 10)  
 })
 
 // Englishボタン

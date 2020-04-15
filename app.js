@@ -7,7 +7,7 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-var time = 1000
+var time = 3000
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = time / 100
 
@@ -42,27 +42,29 @@ const timer = setInterval( () => {
     startBtn.style.display = 'inline-block'
     startBtn.innerText = 'もう一回'
   }
-}, 10)
+}, 10)(((
 */
 
+function countdown(){
+  time -= 1
+  timeText.innerHTML = (time / 100).toFixed(1)
+
+  if (time === 0) {
+    clearInterval(timer)
+    isPlaying = false
+  //  JABtn.style.display = 'inline-block'
+  //  JABtn.innerText = 'もう一回'
+  }
+}
+
 // 日本語ボタン
-async function JABtn.addEventListener('click', () => {
+JABtn.addEventListener('click', () => {
   //  setGame()
   isPlaying = true
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
-  const timer = setInterval(() => {
-    time -= 1
-    timeText.innerHTML = (time / 100).toFixed(1)
-
-    if (time === 0) {
-      clearInterval(timer)
-      isPlaying = false
-    //  JABtn.style.display = 'inline-block'
-    //  JABtn.innerText = 'もう一回'
-    }
-  }, 1)
+  const timer = setInterval(countdown(), 1)
 
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
@@ -77,6 +79,18 @@ ENBtn.addEventListener('click', () => {
   //  tapBtn.disabled = false
   JABtn.style.display = 'none'
   timeText.innerHTML = time / 100;
+
+  const timer = setInterval(() => {
+    time -= 1
+    timeText.innerHTML = (time / 100).toFixed(1)
+
+    if (time === 0) {
+      clearInterval(timer)
+      isPlaying = false
+    //  JABtn.style.display = 'inline-block'
+    //  JABtn.innerText = 'もう一回'
+    }
+  }, 1)
 
   var v = document.getElementById("video")
   v.src = "./PicoCELA PV.mp4";

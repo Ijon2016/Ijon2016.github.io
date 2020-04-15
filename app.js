@@ -7,8 +7,10 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-const time = 10000
+const time = 1000
 const timeText = document.getElementById('js-time');
+timeText.innerHTML = time / 100
+
 // 再生時間の初期値設定
 /*
 const setGame = () => {
@@ -47,7 +49,6 @@ const timer = setInterval( () => {
 JABtn.addEventListener('click', () => {
   //  setGame()
   isPlaying = true
-  //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
   timeText.innerHTML = time / 100;
 

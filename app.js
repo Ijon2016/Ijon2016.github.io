@@ -45,6 +45,7 @@ const timer = setInterval( () => {
 }, 10)(((
 */
 
+/*
 function countdown(){
   time -= 1
   timeText.innerHTML = (time / 10).toFixed(1)
@@ -56,6 +57,7 @@ function countdown(){
   //  JABtn.innerText = 'もう一回'
   }
 }
+*/
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -67,8 +69,12 @@ JABtn.addEventListener('click', () => {
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
   v.load();
-  //v.play();
-  timer = setInterval(countdown(), 100);
+  v.play();
+  //現在の再生位置（秒）を表示
+	v.addEventListener("timeupdate", function(){
+		timeText.innerHTML = v.duration - v.currentTime;
+	}, false);
+  //timer = setInterval(countdown(), 100);
 })
 
 // Englishボタン

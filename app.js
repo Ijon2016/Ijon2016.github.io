@@ -8,8 +8,7 @@ const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
 const time = 10000
-const timeText = document.getElementById('js-time') = time / 100;
-
+const timeText = document.getElementById('js-time');
 // 再生時間の初期値設定
 /*
 const setGame = () => {
@@ -50,6 +49,7 @@ JABtn.addEventListener('click', () => {
   isPlaying = true
   //  tapBtn.disabled = false
   ENBtn.style.display = 'none'
+  timeText.innerHTML = time / 100;
 
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
@@ -75,6 +75,7 @@ ENBtn.addEventListener('click', () => {
   isPlaying = true
   //  tapBtn.disabled = false
   JABtn.style.display = 'none'
+  timeText.innerHTML = time / 100;
 
   var v = document.getElementById("video")
   v.src = "./PicoCELA PV.mp4";

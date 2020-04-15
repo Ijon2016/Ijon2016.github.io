@@ -4,11 +4,10 @@ let isPlaying = false
 //const tapBtn    = document.getElementById('js-tapBtn')
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
 //const ADMedia  = document.getElementById('Jvideo')
-const JABtn = document.getElementById('JABtn')
-const ENBtn = document.getElementById('ENBtn')
-var MediaName = 
+const JABtn = document.getElementById('JABtn');
+const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-//const timeText = document.getElementById('js-time')
+const timeText = document.getElementById('js-time');
 
 // 再生時間の初期値設定
 /*
@@ -42,7 +41,6 @@ JABtn.addEventListener('click', () => {
   v.load();
   v.play();
 
-  /*
   const timer = setInterval(() => {
     time -= 10
     timeText.innerHTML = (time / 1000).toFixed(2)
@@ -54,7 +52,6 @@ JABtn.addEventListener('click', () => {
       //      JABtn.innerText = 'もう一回'
     }
   }, 10)
-  */
 })
 
 // Englishボタン

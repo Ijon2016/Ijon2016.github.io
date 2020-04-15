@@ -64,12 +64,13 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
-  var timer = setInterval(countdown(), 100)
-
   var v = document.getElementById("video")
   v.src = "./テリトリアPV.mp4";
   v.load();
-  v.play();
+  async () => {
+    v.play();
+    timer = setInterval(countdown(), 100);
+  }
 })
 
 // Englishボタン

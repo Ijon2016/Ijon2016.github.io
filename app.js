@@ -32,13 +32,17 @@ const timer = setInterval( () => {
 JABtn.addEventListener('click', () => {
   isPlaying = true
   ENBtn.style.display = 'none'
-  //timeText.innerHTML = time / 100;
+  //timeText.innerHTML = time / 10;
 
-  fetch('https://ijon2016.github.io/JAoptin.txt').then(function (response) {
-    return response.text();
-  }).then(function (text) {
-    console.log(text)
-    //optin.innerHTML = text;
+  fetch('JAoptin.txt').then(function (response) {
+    if(response.ok) {
+      return response.text();
+    }
+    throw new Error('Network response was not ok.');
+  }).then(function(text) { 
+    optin.innerHTML = text;
+  }).catch(function(error) {
+    console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
   v.src = "./テリトリアPV.mp4";
@@ -57,8 +61,15 @@ ENBtn.addEventListener('click', () => {
   isPlaying = true
   //  tapBtn.disabled = false
   JABtn.style.display = 'none'
-  timeText.innerHTML = time / 100;
+  timeText.innerHTML = time / 10;
 
+  fetch('https://ijon2016.github.io/ENoptin.txt').then(function (response) {
+    return response.text();
+  }).then(function (text) {
+    console.log(text);
+  });
+  
+  /*
   const timer = setInterval(() => {
     time -= 1
     timeText.innerHTML = (time / 100).toFixed(1)
@@ -70,6 +81,7 @@ ENBtn.addEventListener('click', () => {
       //  JABtn.innerText = 'もう一回'
     }
   }, 1)
+  */
 
   var v = document.getElementById("video")
   v.src = "./PicoCELA PV.mp4";

@@ -5,13 +5,14 @@ let isPlaying = false
 //const ADMedia  = document.getElementById('Jvideo')
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
-//const countText = document.getElementById('js-count')
+const optin = document.getElementById('optin')
+const OPTinBtn = document.getElementById('OPTinBtn');
+OPTinBtn.style.visibility = 'none'
 /*
 let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const optin = document.getElementById('optin')
 const questionell = document.getElementById('js-enq')
 const v = document.getElementById("video")
 
@@ -46,6 +47,8 @@ JABtn.addEventListener('click', () => {
   }).catch(function(error) {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
+
+
 
   v.src = "./テリトリアPV.mp4";
   v.load();

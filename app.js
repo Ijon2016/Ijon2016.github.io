@@ -96,6 +96,7 @@ ENBtn.addEventListener('click', () => {
 OPTinBtn.addEventListener('click', () => {
 
   optin.style.visibility = 'none';
+  v.style.visibility = 'visible'
   v.load();
   v.play();
   /*

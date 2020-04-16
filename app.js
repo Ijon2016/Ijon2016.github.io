@@ -37,7 +37,8 @@ JABtn.addEventListener('click', () => {
   fetch('https://ijon2016.github.io/JAoptin.txt').then(function (response) {
     return response.text();
   }).then(function (text) {
-    optin.innerHTML = text;
+    console.log(text)
+    //optin.innerHTML = text;
   });
 
   v.src = "./テリトリアPV.mp4";

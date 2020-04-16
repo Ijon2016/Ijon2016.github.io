@@ -57,9 +57,14 @@ JABtn.addEventListener('click', () => {
   v.load();
   v.play();
   //残り秒数を表示
-	v.addEventListener("timeupdate", function(){
-		timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
-	}, false);
+  v.addEventListener("timeupdate", function () {
+    timeText.innerHTML = (){
+      if (v.currentTime == 0)
+        timeText.innerHTML = time / 10;
+      else
+        (v.duration - v.currentTime).toFixed(1);
+    }
+  }, false);
 
 })
 
@@ -78,8 +83,8 @@ ENBtn.addEventListener('click', () => {
     if (time === 0) {
       clearInterval(timer)
       isPlaying = false
-    //  JABtn.style.display = 'inline-block'
-    //  JABtn.innerText = 'もう一回'
+      //  JABtn.style.display = 'inline-block'
+      //  JABtn.innerText = 'もう一回'
     }
   }, 1)
 

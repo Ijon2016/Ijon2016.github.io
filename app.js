@@ -13,7 +13,7 @@ var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
 const Q = document.getElementById('questionnaire');
-const v = document.getElementById("video").style.visibility = 'none';
+const v = document.getElementById("video").style.visibility = 'hidden';
 
 
 /*
@@ -73,20 +73,6 @@ ENBtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
   
-  /*
-  const timer = setInterval(() => {
-    time -= 1
-    timeText.innerHTML = (time / 100).toFixed(1)
-
-    if (time === 0) {
-      clearInterval(timer)
-      isPlaying = false
-      //  JABtn.style.display = 'inline-block'
-      //  JABtn.innerText = 'もう一回'
-    }
-  }, 1)
-  */
-
  OPTinBtn.innerText = 'Accept and anser the questionnarie<';
  OPTinBtn.style.display = '';
  v.src = "./PicoCELA PV.mp4";
@@ -95,7 +81,7 @@ ENBtn.addEventListener('click', () => {
 
 OPTinBtn.addEventListener('click', () => {
 
-  optin.style.visibility = 'none';
+  optin.style.display = 'none';
   v.style.visibility = 'visible'
   v.load();
   v.play();

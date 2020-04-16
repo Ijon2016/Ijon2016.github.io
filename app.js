@@ -60,7 +60,7 @@ JABtn.addEventListener('click', () => {
   v.addEventListener("timeupdate", function () {
     timeText.innerHTML = (){
       if (v.currentTime == 0)
-        timeText.innerHTML = time / 10;
+        time / 10;
       else
         (v.duration - v.currentTime).toFixed(1);
     }

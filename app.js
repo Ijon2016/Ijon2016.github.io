@@ -13,7 +13,7 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const questionell = document.getElementById('js-enq')
+const questionnarie = document.getElementById('js-enq')
 const v = document.getElementById("video")
 
 
@@ -48,7 +48,11 @@ JABtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
+  OPTinBtn.style.visibility = 'visible'
+})
 
+
+OPTinBtn.addEventListener('click', () => {
 
   v.src = "./テリトリアPV.mp4";
   v.load();

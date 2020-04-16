@@ -28,22 +28,13 @@ const timer = setInterval( () => {
 }, 10)(((
 */
 
-function loadFile(url) {
-  fetch(url).then(function (response) {
-    return response.text();
-  }).then(function (text) {
-    // textに文字列で結果が渡される
-    ...
-  });
-}
-
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   isPlaying = true
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
-  fetch("./JAoptin.txt").then(function (response) {
+  fetch('https://ijon2016.github.io/JAoptin.txt').then(function (response) {
     return response.text();
   }).then(function (text) {
     optin.innerHTML = text;

@@ -6,8 +6,7 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 const optin = document.getElementById('optin')
-const OPTinBtn = document.getElementById('OPTinBtn');
-OPTinBtn.style.visibility = 'none'
+const OPTinBtn = document.getElementById('OPTinBtn').style.visibility = 'none';
 /*
 let time = 300
 var timeText = document.getElementById('js-time');

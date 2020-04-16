@@ -1,15 +1,18 @@
 // 変数定義
 let isPlaying = false
 //let tapCount, time = 0
-//const tapBtn    = document.getElementById('js-tapBtn')
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
 //const ADMedia  = document.getElementById('Jvideo')
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
-var time = 300
+let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = time / 10
+const optin = document.getElementById('optin')
+const questionell = document.getElementById('js-enq')
+const v = document.getElementById("video")
+
 
 /*
 const timer = setInterval( () => {
@@ -32,7 +35,13 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
-  var v = document.getElementById("video")
+  if (window.File && window.FileReader && window.FileList) {
+    // Great success! All the File APIs are supported.
+    optin.innerHTML = new FileReader.readAsText("./JAoptin.txt");
+  } else {
+    alert('The File APIs are not fully supported in this browser.');
+  }
+
   v.src = "./テリトリアPV.mp4";
   v.load();
   v.play();

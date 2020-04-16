@@ -12,7 +12,7 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const questionnarie = document.getElementById('js-enq')
+const Q = document.getElementById('questionnaire')
 const v = document.getElementById("video")
 
 
@@ -33,6 +33,7 @@ const timer = setInterval( () => {
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   isPlaying = true
+  JABtn.style.display = 'none'
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 10;
 
@@ -47,21 +48,9 @@ JABtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
+  OPTinBtn.innerText = '同意してアンケートに回答';
   OPTinBtn.style.display = '';
-})
-
-
-OPTinBtn.addEventListener('click', () => {
-
   v.src = "./テリトリアPV.mp4";
-  v.load();
-  v.play();
-  /*
-  //残り秒数を表示
-  v.addEventListener("timeupdate", function () {
-    timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
-  }, false);
-  */
 
 })
 
@@ -69,9 +58,9 @@ OPTinBtn.addEventListener('click', () => {
 ENBtn.addEventListener('click', () => {
   //  setGame()
   isPlaying = true
-  //  tapBtn.disabled = false
+  ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
-  timeText.innerHTML = time / 10;
+  //timeText.innerHTML = time / 10;
 
   fetch('ENoptin.txt').then(function (response) {
     if(response.ok) {
@@ -98,9 +87,23 @@ ENBtn.addEventListener('click', () => {
   }, 1)
   */
 
-  var v = document.getElementById("video")
-  v.src = "./PicoCELA PV.mp4";
-  v.load();
-  v.play();
+ OPTinBtn.innerText = 'Accept and anser the questionnarie<';
+ OPTinBtn.style.display = '';
+ v.src = "./PicoCELA PV.mp4";
 
 })
+
+OPTinBtn.addEventListener('click', () => {
+
+  optin.style.visibility = 'none';
+  v.load();
+  v.play();
+  /*
+  //残り秒数を表示
+  v.addEventListener("timeupdate", function () {
+    timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
+  }, false);
+  */
+
+})
+

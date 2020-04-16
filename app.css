@@ -55,6 +55,14 @@ html {
   font-weight: bold;
   cursor: pointer;
 }
+
+.opt-in span {
+  display: inline-block;
+  width: 50px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /*
 .time span {
   display: inline-block;

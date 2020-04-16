@@ -6,9 +6,11 @@ let isPlaying = false
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 //const countText = document.getElementById('js-count')
+/*
 let time = 300
 var timeText = document.getElementById('js-time');
-//timeText.innerHTML = (time / 10).toString();
+timeText.innerHTML = (time / 10).toString();
+*/
 const optin = document.getElementById('optin')
 const questionell = document.getElementById('js-enq')
 const v = document.getElementById("video")
@@ -48,10 +50,12 @@ JABtn.addEventListener('click', () => {
   v.src = "./テリトリアPV.mp4";
   v.load();
   v.play();
+  /*
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {
     timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
   }, false);
+  */
 
 })
 
@@ -63,10 +67,15 @@ ENBtn.addEventListener('click', () => {
   JABtn.style.display = 'none'
   timeText.innerHTML = time / 10;
 
-  fetch('https://ijon2016.github.io/ENoptin.txt').then(function (response) {
-    return response.text();
-  }).then(function (text) {
-    console.log(text);
+  fetch('ENoptin.txt').then(function (response) {
+    if(response.ok) {
+      return response.text();
+    }
+    throw new Error('Network response was not ok.');
+  }).then(function(text) { 
+    optin.innerHTML = text;
+  }).catch(function(error) {
+    console.log('There has been a problem with your fetch operation: ', error.message);
   });
   
   /*

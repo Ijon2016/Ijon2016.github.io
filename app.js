@@ -12,8 +12,8 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const Q = document.getElementById('questionnaire')
-const v = document.getElementById("video")
+const Q = document.getElementById('questionnaire');
+const v = document.getElementById("video").style.visibility = 'none';
 
 
 /*

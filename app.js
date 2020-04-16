@@ -28,19 +28,26 @@ const timer = setInterval( () => {
 }, 10)(((
 */
 
+function loadFile(url) {
+  fetch(url).then(function (response) {
+    return response.text();
+  }).then(function (text) {
+    // textに文字列で結果が渡される
+    ...
+  });
+}
+
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
-  //  setGame()
   isPlaying = true
   ENBtn.style.display = 'none'
   //timeText.innerHTML = time / 100;
 
-  if (window.File && window.FileReader && window.FileList) {
-    // Great success! All the File APIs are supported.
-    optin.innerHTML = new FileReader.readAsText("./JAoptin.txt");
-  } else {
-    alert('The File APIs are not fully supported in this browser.');
-  }
+  fetch("./JAoptin.txt").then(function (response) {
+    return response.text();
+  }).then(function (text) {
+    optin.innerHTML = text;
+  });
 
   v.src = "./テリトリアPV.mp4";
   v.load();

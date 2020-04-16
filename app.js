@@ -11,26 +11,6 @@ var time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = time / 10
 
-// 再生時間の初期値設定
-/*
-const setGame = () => {
-  tapCount = 0
-  time = 10000
-  countText.innerText = tapCount
-  timeText.innerHTML = time / 1000
-}
-setGame()
-*/
-
-/*
-// タップした時にカウントを増やす
-tapBtn.addEventListener('click', () => {
-  if (!isPlaying) return false
-  tapCount++
-  countText.innerText = tapCount
-})
-*/
-
 /*
 const timer = setInterval( () => {
   time -= 10
@@ -58,12 +38,7 @@ JABtn.addEventListener('click', () => {
   v.play();
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {
-    timeText.innerHTML = () => {
-      if (v.currentTime == 0)
-        time / 10;
-      else
-        (v.duration - v.currentTime).toFixed(1);
-    }
+    timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
   }, false);
 
 })

@@ -58,7 +58,7 @@ JABtn.addEventListener('click', () => {
   v.play();
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {
-    timeText.innerHTML = (){
+    timeText.innerHTML = () => {
       if (v.currentTime == 0)
         time / 10;
       else

@@ -92,7 +92,7 @@ OPTinBtn.addEventListener('click', () => {
     ConMes.style.display ='';
     setTimeout(
     function() {
-      window.location.href ="https://picocela.com"}, 1)
+      window.location.href ="https://picocela.com"}, 2)
   })
 })
 

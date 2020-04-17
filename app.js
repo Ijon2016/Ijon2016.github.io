@@ -49,8 +49,8 @@ JABtn.addEventListener('click', () => {
 // Englishボタン
 ENBtn.addEventListener('click', () => {
   //  setGame()
-  const SetLangM = document.getElementById('selLang').style.display = 'none';
   isPlaying = true
+  selLang.style.display = 'none';
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
   //timeText.innerHTML = time / 10;

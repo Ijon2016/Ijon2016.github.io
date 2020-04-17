@@ -50,8 +50,8 @@ JABtn.addEventListener('click', () => {
 
   OPTinBtn.innerText = '同意してアンケートに回答';
   OPTinBtn.style.display = '';
-  v.src = "./テリトリアPV.mp4";
-
+  V.src = "./テリトリアPV.mp4";
+  V.style.display = 'none';
 })
 
 // Englishボタン

@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
-const SetLangM  = document.getElementById('Message');
+//const SetLangM  = document.getElementById('Message');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 const optin = document.getElementById('optin')
@@ -33,7 +33,7 @@ const timer = setInterval( () => {
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   isPlayingM = true;
-  SelLangM.style.display = 'none';
+  const SetLangM  = document.getElementById('Message').style.display = 'none';
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;

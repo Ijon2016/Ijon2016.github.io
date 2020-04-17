@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
-const SelLang  = document.getElementById('message')
+const SelLang  = document.getElementById('Lang');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 const optin = document.getElementById('optin')
@@ -32,10 +32,10 @@ const timer = setInterval( () => {
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
-  isPlaying = true
-  SelLang.style.display = 'none'
-  JABtn.style.display = 'none'
-  ENBtn.style.display = 'none'
+  isPlaying = true;
+  SelLang.style.display = 'none';
+  JABtn.style.display = 'none';
+  ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
 
   fetch('JAoptin.txt').then(function (response) {

@@ -81,7 +81,7 @@ OPTinBtn.addEventListener('click', () => {
   }, false);
   */
   V.addEventListener("ended", function(){
-    ConMes.innerText = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a id='redir_url' href='https://www.picocela.com'>ここ</a>をクリック'
+    ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a id='redir_url' href='https://www.picocela.com'>ここ</a>をクリック'
   })
 })
 

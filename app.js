@@ -91,7 +91,7 @@ OPTinBtn.addEventListener('click', () => {
   
   V.addEventListener("timeupdate", function(){
     if (5.0 < V.currentTime) {
-      Q.style.display = '';
+      QuitBtn.style.display = '';
     }
   })
 

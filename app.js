@@ -2,7 +2,7 @@
 let isPlaying = false
 //let tapCount, time = 0
 //const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
-//const SetLangM  = document.getElementById('Message');
+//const selLang = document.getElementById('selLang');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 const OptMes = document.getElementById('optin');
@@ -41,6 +41,7 @@ JABtn.addEventListener('click', () => {
   OPTinBtn.style.display = '';
   V.src = "./テリトリアPV.mp4";
   V.style.display = 'none';
+
   ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.picocela.com">ここ</a>をクリック';
   ConMes.style.display = 'none';
 })

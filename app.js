@@ -15,7 +15,7 @@ timeText.innerHTML = (time / 10).toString();
 const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
-const ConMes = document.getElementById('connecting');
+//const ConMes = document.getElementById('connecting');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -24,6 +24,7 @@ JABtn.addEventListener('click', () => {
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
+  const ConMes = document.getElementById('connecting');
 
   fetch('JAoptin.txt').then(function (response) {
     if (response.ok) {
@@ -31,7 +32,7 @@ JABtn.addEventListener('click', () => {
     }
     throw new Error('Network response was not ok.');
   }).then(function (text) {
-    optin.innerHTML = text;
+    OptMes.innerHTML = text;
   }).catch(function (error) {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
@@ -52,6 +53,7 @@ ENBtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
   //timeText.innerHTML = time / 10;
+  const ConMes = document.getElementById('connecting');
 
   fetch('ENoptin.txt').then(function (response) {
     if (response.ok) {
@@ -59,7 +61,7 @@ ENBtn.addEventListener('click', () => {
     }
     throw new Error('Network response was not ok.');
   }).then(function (text) {
-    optin.innerHTML = text;
+    OptMes.innerHTML = text;
   }).catch(function (error) {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });

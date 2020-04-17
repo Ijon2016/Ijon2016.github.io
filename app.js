@@ -87,12 +87,18 @@ OPTinBtn.addEventListener('click', () => {
     timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
   }, false);
   */
-  V.addEventListener("ended", function () {
 
+  V.appendChild("timeupdate", function(){
+    if (5.0 < V.currentTime) {
+
+    }
+  })
+
+  V.addEventListener("ended", function () {
     ConMes.style.display ='';
     setTimeout(
     function() {
-      window.location.href ="https://picocela.com"}, 2)
+      window.location.href ="https://picocela.com"}, 3)
   })
 })
 

@@ -23,6 +23,15 @@ html {
   text-align:center;
 }
 
+div#Message {
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+}
+
 .btn-tap {
   width: 200px;
   height: 200px;
@@ -61,10 +70,6 @@ html {
   width: 360px;
   font-size: 18px;
   font-weight: bold;
-}
-
-button#OPTinBTN {
-  display: none;
 }
 
 /*

@@ -13,8 +13,7 @@ var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
 const Q = document.getElementById('questionnaire');
-const v = document.getElementById("video").style.visibility = 'hidden';
-
+const V = document.getElementById("video");
 
 /*
 const timer = setInterval( () => {
@@ -58,6 +57,7 @@ JABtn.addEventListener('click', () => {
 // Englishボタン
 ENBtn.addEventListener('click', () => {
   //  setGame()
+  const SetLangM  = document.getElementById('Message').style.display = 'none';
   isPlaying = true
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
@@ -76,16 +76,16 @@ ENBtn.addEventListener('click', () => {
   
  OPTinBtn.innerText = 'Accept and anser the questionnarie<';
  OPTinBtn.style.display = '';
- v.src = "./PicoCELA PV.mp4";
-
+ V.src = "./PicoCELA PV.mp4";
+ V.style.display = 'none';
 })
 
 OPTinBtn.addEventListener('click', () => {
 
   optin.style.display = 'none';
-  v.style.visibility = 'visible';
-  v.load();
-  v.play();
+  //const v = document.getElementById("video");
+  V.style.display ='';
+  V.play();
   /*
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {

@@ -14,6 +14,8 @@ const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
 const ConMes = document.getElementById('conMes');
+const JAredir = 'https://www.picocela.com';
+const ENredir = 'https://www.picocela.com/en';
 const QuitBtn = document.getElementById('quit');
 
 // 日本語ボタン
@@ -23,7 +25,6 @@ JABtn.addEventListener('click', () => {
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
-  //const ConMes = document.getElementById('conMes');
 
   fetch('JAoptin.txt').then(function (response) {
     if (response.ok) {
@@ -43,7 +44,7 @@ JABtn.addEventListener('click', () => {
 
   QuitBtn.innerText = '接続';
 
-  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.picocela.com">ここ</a>をクリック';
+  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href='+"https://www.picocela.com"+'>ここ</a>をクリック';
   ConMes.style.display = 'none';
 })
 
@@ -55,7 +56,6 @@ ENBtn.addEventListener('click', () => {
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
   //timeText.innerHTML = time / 10;
-  const ConMes = document.getElementById('conMes');
 
   fetch('ENoptin.txt').then(function (response) {
     if (response.ok) {
@@ -103,7 +103,7 @@ OPTinBtn.addEventListener('click', () => {
     setTimeout(
       function () {
         window.location.href = "https://picocela.com"
-      }, 2000)
+      }, 3000)
   })
 })
 

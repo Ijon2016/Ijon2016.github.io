@@ -40,6 +40,7 @@ JABtn.addEventListener('click', () => {
   OPTinBtn.style.display = '';
   V.src = "./テリトリアPV.mp4";
   V.style.display = 'none';
+  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.picocela.com">ここ</a>をクリック';
 })
 
 // Englishボタン
@@ -66,6 +67,7 @@ ENBtn.addEventListener('click', () => {
   OPTinBtn.style.display = '';
   V.src = "./PicoCELA PV.mp4";
   V.style.display = 'none';
+  ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href="https://www.picocela.com/en">here</a>';
 })
 
 OPTinBtn.addEventListener('click', () => {
@@ -81,7 +83,7 @@ OPTinBtn.addEventListener('click', () => {
   }, false);
   */
   V.addEventListener("ended", function () {
-    ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href='https://www.picocela.com'>ここ</a>をクリック';
+    //ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href='https://www.picocela.com'>ここ</a>をクリック';
     setTimeout(
     function link() {
       location.href =’https://picocela.com’;

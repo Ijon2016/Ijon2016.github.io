@@ -6,7 +6,7 @@ const selLang = document.getElementById('selLang');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 const OptMes = document.getElementById('optin');
-const OPTinBtn = document.getElementById('OPTinBtn');
+//const OPTinBtn = document.getElementById('OPTinBtn');
 /*
 let time = 300
 var timeText = document.getElementById('js-time');
@@ -16,6 +16,7 @@ const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
 const ConMes = document.getElementById('conMes');
+const QuitBtn = document.getElementById('quit');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -88,17 +89,20 @@ OPTinBtn.addEventListener('click', () => {
   }, false);
   */
 
-  V.appendChild("timeupdate", function(){
+  /*
+  V.addEventListener("timeupdate", function(){
     if (5.0 < V.currentTime) {
 
     }
   })
+*/
 
   V.addEventListener("ended", function () {
-    ConMes.style.display ='';
+    ConMes.style.display = '';
     setTimeout(
-    function() {
-      window.location.href ="https://picocela.com"}, 3)
+      function () {
+        window.location.href = "https://picocela.com"
+      }, 3)
   })
 })
 

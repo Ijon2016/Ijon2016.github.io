@@ -14,8 +14,8 @@ const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
 const ConMes = document.getElementById('conMes');
-const JAredir = 'https://www.picocela.com';
-const ENredir = 'https://www.picocela.com/en';
+const JAredir = 'https://www.yomiuri.co.jp';
+const ENredir = 'https://www.asahi.com';
 const QuitBtn = document.getElementById('quit');
 
 // 日本語ボタン
@@ -44,7 +44,7 @@ JABtn.addEventListener('click', () => {
 
   QuitBtn.innerText = '接続';
 
-  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href='+"https://www.picocela.com"+'>ここ</a>をクリック';
+  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href='+JAredir+'>ここ</a>をクリック';
   ConMes.style.display = 'none';
 })
 
@@ -73,7 +73,7 @@ ENBtn.addEventListener('click', () => {
   V.src = "./PicoCELA PV.mp4";
   V.style.display = 'none';
 
-  ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href="https://www.picocela.com/en">here</a>';
+  ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href='+ENredir+'>here</a>';
   ConMes.style.display = 'none';
 
   QuitBtn.innerText = 'connect';

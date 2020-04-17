@@ -102,7 +102,7 @@ OPTinBtn.addEventListener('click', () => {
     setTimeout(
       function () {
         window.location.href = "https://picocela.com"
-      }, 3)
+      }, 10)
   })
 })
 

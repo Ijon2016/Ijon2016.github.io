@@ -76,7 +76,7 @@ ENBtn.addEventListener('click', () => {
 
 OPTinBtn.addEventListener('click', () => {
 
-  OptMesh.style.display = 'none';
+  OptMes.style.display = 'none';
   //const v = document.getElementById("video");
   V.style.display = '';
   V.play();

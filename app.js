@@ -1,7 +1,5 @@
 // 変数定義
 let isPlaying = false
-//let tapCount, time = 0
-//const ADMedia  = document.getElementById('js-media').style.visibility = 'hidden'
 const selLang = document.getElementById('selLang');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
@@ -25,7 +23,7 @@ JABtn.addEventListener('click', () => {
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
-  const ConMes = document.getElementById('conMes');
+  //const ConMes = document.getElementById('conMes');
 
   fetch('JAoptin.txt').then(function (response) {
     if (response.ok) {
@@ -42,6 +40,8 @@ JABtn.addEventListener('click', () => {
   OPTinBtn.style.display = '';
   V.src = "./テリトリアPV.mp4";
   V.style.display = 'none';
+
+  QuitBtn.innerText = '接続';
 
   ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.picocela.com">ここ</a>をクリック';
   ConMes.style.display = 'none';
@@ -72,8 +72,11 @@ ENBtn.addEventListener('click', () => {
   OPTinBtn.style.display = '';
   V.src = "./PicoCELA PV.mp4";
   V.style.display = 'none';
+
   ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href="https://www.picocela.com/en">here</a>';
   ConMes.style.display = 'none';
+
+  QuitBtn.innerText = 'connect';
 })
 
 OPTinBtn.addEventListener('click', () => {

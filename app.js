@@ -5,7 +5,7 @@ let isPlaying = false
 //const SetLangM  = document.getElementById('Message');
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
-const optin = document.getElementById('optin')
+const OptMes = document.getElementById('optin');
 const OPTinBtn = document.getElementById('OPTinBtn');
 /*
 let time = 300
@@ -15,19 +15,7 @@ timeText.innerHTML = (time / 10).toString();
 const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
-/*
-const timer = setInterval( () => {
-  time -= 10
-  timeText.innerHTML = (time / 100).toFixed(1)
-
-  if (time === 0) {
-    clearInterval(timer)
-    isPlaying = false
-    startBtn.style.display = 'inline-block'
-    startBtn.innerText = 'もう一回'
-  }
-}, 10)(((
-*/
+const ConMes = document.getElementById('connecting');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -74,7 +62,7 @@ ENBtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
   
- OPTinBtn.innerText = 'Accept and anser the questionnarie<';
+ OPTinBtn.innerText = 'Accept the terms and fill the form';
  OPTinBtn.style.display = '';
  V.src = "./PicoCELA PV.mp4";
  V.style.display = 'none';
@@ -82,7 +70,7 @@ ENBtn.addEventListener('click', () => {
 
 OPTinBtn.addEventListener('click', () => {
 
-  optin.style.display = 'none';
+  OptMesh.style.display = 'none';
   //const v = document.getElementById("video");
   V.style.display ='';
   V.play();
@@ -92,6 +80,8 @@ OPTinBtn.addEventListener('click', () => {
     timeText.innerHTML = (v.duration - v.currentTime).toFixed(1);
   }, false);
   */
-
+  V.addEventListener("ended", function(){
+    ConMes.innerText = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a id='redir_url' href='https://www.picocela.com'>ここ</a>をクリック'
+  })
 })
 

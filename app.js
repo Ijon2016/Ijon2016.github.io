@@ -15,16 +15,16 @@ timeText.innerHTML = (time / 10).toString();
 const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
-const ConMes = document.getElementById('connecting');
+const ConMes = document.getElementById('conMes');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   isPlayingM = true;
-  const SetLangM = document.getElementById('Message').style.display = 'none';
+  const SetLang = document.getElementById('selLang').style.display = 'none';
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
-  const ConMes = document.getElementById('connecting');
+  const ConMes = document.getElementById('conMes');
 
   fetch('JAoptin.txt').then(function (response) {
     if (response.ok) {
@@ -49,12 +49,12 @@ JABtn.addEventListener('click', () => {
 // Englishボタン
 ENBtn.addEventListener('click', () => {
   //  setGame()
-  const SetLangM = document.getElementById('Message').style.display = 'none';
+  const SetLangM = document.getElementById('selLang').style.display = 'none';
   isPlaying = true
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
   //timeText.innerHTML = time / 10;
-  const ConMes = document.getElementById('connecting');
+  const ConMes = document.getElementById('conMes');
 
   fetch('ENoptin.txt').then(function (response) {
     if (response.ok) {

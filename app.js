@@ -15,7 +15,7 @@ timeText.innerHTML = (time / 10).toString();
 const Q = document.getElementById('questionnaire');
 const V = document.getElementById("video");
 
-//const ConMes = document.getElementById('connecting');
+const ConMes = document.getElementById('connecting');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -78,7 +78,7 @@ ENBtn.addEventListener('click', () => {
 OPTinBtn.addEventListener('click', () => {
 
   OptMes.style.display = 'none';
-  //const v = document.getElementById("video");
+  OPTinBtn.style.display = 'none'
   V.style.display = '';
   V.play();
   /*
@@ -88,6 +88,7 @@ OPTinBtn.addEventListener('click', () => {
   }, false);
   */
   V.addEventListener("ended", function () {
+
     ConMes.style.display ='';
     setTimeout(
     function() {

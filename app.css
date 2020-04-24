@@ -92,7 +92,7 @@ div#Message {
   height: auto;
   z-index: -100;
   background: url('soccer_dribble_man.png') no-repeat;
-  background-size: contain;
+  background-size: cover;
  }
 
  .fform{
@@ -103,6 +103,6 @@ div#Message {
   justify-content: center;
   align-items: center;
   text-align:center;
-  font-size: 60px;
+  font-size: 80px;
   margin: auto;
  }

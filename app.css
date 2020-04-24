@@ -84,10 +84,10 @@ div#Message {
 /* ----- 背景用の動画ファイル ----- */
 #video{
   position: fixed;
-  left: 0;
-  bottom: 0;
-  min-width: 40%;
-  min-height: 40%;
+  left: 10%;
+  bottom: 10%;
+  min-width: 80%;
+  min-height: 80%;
   width: auto;
   height: auto;
   z-index: -100;
@@ -103,5 +103,6 @@ div#Message {
   justify-content: center;
   align-items: center;
   text-align:center;
+  font-size: 60px;
   margin: auto;
  }

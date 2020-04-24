@@ -1,16 +1,25 @@
 // 変数定義
 let isPlaying = false
+
+// select lang
 const selLang = document.getElementById('selLang');
+const SelLangMes = '言語を選択してください'
+Optin.
 const JABtn = document.getElementById('JABtn');
+const JAOptMes = 'JAoptin.txt';
 const ENBtn = document.getElementById('ENBtn');
-const OptMes = document.getElementById('optin');
+const ENOptMes = 'ENoptin.txt';
+const Optin = document.getElementById('optin');
+
 //const OPTinBtn = document.getElementById('OPTinBtn');
 /*
 let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const Q = document.getElementById('questionnaire');
+const F = document.getElementById('form');
+const JABv = './テリトリアPV.mp4';
+const ENBv = './PicoCELA PV.mp4';
 const V = document.getElementById("video");
 
 const ConMes = document.getElementById('conMes');
@@ -26,20 +35,21 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none';
   //timeText.innerHTML = time / 10;
 
-  fetch('JAoptin.txt').then(function (response) {
+  fetch(JAOptMes).then(function (response) {
     if (response.ok) {
       return response.text();
     }
     throw new Error('Network response was not ok.');
   }).then(function (text) {
-    OptMes.innerHTML = text;
+    Optin.innerHTML = text;
   }).catch(function (error) {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
   OPTinBtn.innerText = '同意してアンケートに回答';
   OPTinBtn.style.display = '';
-  V.src = "./テリトリアPV.mp4";
+  V.src = JABv;
+  V.poster = 'soccor_dribble_man.png'
   V.style.display = 'none';
 
   QuitBtn.innerText = '接続';
@@ -63,14 +73,14 @@ ENBtn.addEventListener('click', () => {
     }
     throw new Error('Network response was not ok.');
   }).then(function (text) {
-    OptMes.innerHTML = text;
+    Optin.innerHTML = text;
   }).catch(function (error) {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
   OPTinBtn.innerText = 'Accept the terms and fill the form';
   OPTinBtn.style.display = '';
-  V.src = "./PicoCELA PV.mp4";
+  V.src = ENBv;
   V.style.display = 'none';
 
   ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href='+ENredir+'>here</a>';
@@ -81,7 +91,7 @@ ENBtn.addEventListener('click', () => {
 
 OPTinBtn.addEventListener('click', () => {
 
-  OptMes.style.display = 'none';
+  Optin.style.display = 'none';
   OPTinBtn.style.display = 'none'
   V.style.display = '';
   V.play();

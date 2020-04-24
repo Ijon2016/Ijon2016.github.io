@@ -86,12 +86,12 @@ div#Message {
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  min-width: 40%;
+  min-height: 40%;
+  width: 80%;
   height: auto;
   z-index: -100;
-  background: url('soccer_dribble_man.png') no-repeat;
+  background: url('soccer_dribble_man.png') contain;
   background-size: cover;
  }
 
@@ -99,7 +99,7 @@ div#Message {
   position: relative; /*必ず必要*/
   z-index: 2; /*必ず必要*/
   display: flex;
-  width: 50%;
+  width: 70%;
   justify-content: center;
   align-items: center;
   text-align:center;

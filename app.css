@@ -85,8 +85,8 @@ div#Message {
 #video{
   position: fixed;
   left: 10%;
-  bottom: 10%;
-  min-width: 60%;
+  top: 10%;
+  min-width: 80%;
   min-height: auto;
   width: 80%;
   height: auto;

@@ -5,14 +5,14 @@ let isPlaying = false
 const selLang = document.getElementById('selLang');
 //const SelLangMes = '言語を選択してください';
 //selLang.innerText = SelLangMes;
-selLang.innerText = '言語を選択してください';
-const JABtn = document.getElementById('JABtn');
-const ENBtn = document.getElementById('ENBtn');
+//selLang.innerText = '言語を選択してください';
+//const JABtn = document.getElementById('JABtn');
+//const ENBtn = document.getElementById('ENBtn');
 
 // set lang variables
 // var OptMes = 'ENoptin.txt';
-const Optin = document.getElementById('optin');
-const OPTinBtn = document.getElementById('OPTinBtn');
+//const Optin = document.getElementById('optin');
+//const OPTinBtn = document.getElementById('OPTinBtn');
 
 /*
 let time = 300

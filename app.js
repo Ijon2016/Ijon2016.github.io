@@ -5,11 +5,12 @@ let isPlaying = false
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください';
 //selLang.innerHTML = SelLangMes;
-window.onload = function() {
+window.onload = function () {
   what();
-  function what(){
-      selLang.innerHTML = SelLangMes;
+  function what() {
+    selLang.innerHTML = SelLangMes;
   };
+}
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
@@ -105,7 +106,7 @@ const QuitBtn = document.getElementById('quit');
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
-  OPTinBtn.style.display = 'none'
+  OPTinBtn.style.display = 'none';
   F.style.display = '';
   V.style.display = '';
   V.play();
@@ -177,4 +178,4 @@ OPTinBtn.addEventListener('click', () => {
         window.location.href = "https://picocela.com"
       }, 2500)
   })
-}
+})

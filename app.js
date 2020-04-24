@@ -20,6 +20,7 @@ var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
 const F = document.getElementById('form');
+
 const JABv = './テリトリアPV.mp4';
 const ENBv = './PicoCELA PV.mp4';
 const V = document.getElementById("video");

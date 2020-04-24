@@ -82,6 +82,7 @@ div#Message {
 */
 
 /* ----- 背景用の動画ファイル ----- */
+/*
 #video{
   position: fixed;
   left: 10%;
@@ -96,8 +97,8 @@ div#Message {
  }
 
  .fform{
-  position: relative; /*必ず必要*/
-  z-index: 2; /*必ず必要*/
+  position: relative; //必ず必要
+  z-index: 2; //必ず必要
   display: flex;
   width: 80%;
   justify-content: center;
@@ -106,3 +107,4 @@ div#Message {
   font-size: 80px;
   margin: auto;
  }
+ */

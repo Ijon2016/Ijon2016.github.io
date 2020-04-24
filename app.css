@@ -24,8 +24,8 @@ html {
 }
 
 div#Message {
-  padding: 15px;
-  max-width: 700px;
+  padding: 16px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
@@ -67,8 +67,8 @@ div#Message {
 
 .opt-in span {
   display: inline-block;
-  width: 360px;
-  font-size: 18px;
+  width: 400px;
+  font-size: 16px;
   font-weight: bold;
 }
 

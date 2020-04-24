@@ -9,8 +9,7 @@ const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
 // set lang variables
-const JAOptMes = 'JAoptin.txt';
-const ENOptMes = 'ENoptin.txt';
+var OptMes = 'ENoptin.txt';
 const Optin = document.getElementById('optin');
 
 //const OPTinBtn = document.getElementById('OPTinBtn');
@@ -19,7 +18,7 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-const FF = document.getElementById('fform');
+//const FF = document.getElementById('fform');
 const F = document.getElementById('form');
 
 const JABv = './テリトリアPV.mp4';
@@ -38,9 +37,10 @@ JABtn.addEventListener('click', () => {
   selLang.style.display = 'none';
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
+  OptMes = 'JAoptin.txt'
   //timeText.innerHTML = time / 10;
 
-  fetch(JAOptMes).then(function (response) {
+  fetch(OptMes).then(function (response) {
     if (response.ok) {
       return response.text();
     }
@@ -69,9 +69,10 @@ ENBtn.addEventListener('click', () => {
   selLang.style.display = 'none';
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
+  OptMes = 'ENoptin.txt'
   //timeText.innerHTML = time / 10;
 
-  fetch('ENoptin.txt').then(function (response) {
+  fetch(OptMes).then(function (response) {
     if (response.ok) {
       return response.text();
     }

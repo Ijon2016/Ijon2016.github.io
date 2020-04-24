@@ -4,10 +4,11 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-Optin.
 const JABtn = document.getElementById('JABtn');
-const JAOptMes = 'JAoptin.txt';
 const ENBtn = document.getElementById('ENBtn');
+
+// set lang variables
+const JAOptMes = 'JAoptin.txt';
 const ENOptMes = 'ENoptin.txt';
 const Optin = document.getElementById('optin');
 
@@ -102,18 +103,20 @@ OPTinBtn.addEventListener('click', () => {
   }, false);
   */
   
+  /*
   V.addEventListener("timeupdate", function(){
     if (5.0 < V.currentTime) {
       QuitBtn.style.display = '';
     }
   })
+  */
 
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
     setTimeout(
       function () {
         window.location.href = "https://picocela.com"
-      }, 3000)
+      }, 2500)
   })
 })
 

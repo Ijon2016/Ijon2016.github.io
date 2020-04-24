@@ -4,15 +4,15 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-const selLang.innerText = SelLangMes;
+selLang.innerText = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
 // set lang variables
 // var OptMes = 'ENoptin.txt';
 const Optin = document.getElementById('optin');
-
 const OPTinBtn = document.getElementById('OPTinBtn');
+
 /*
 let time = 300
 var timeText = document.getElementById('js-time');
@@ -21,8 +21,7 @@ timeText.innerHTML = (time / 10).toString();
 //const FF = document.getElementById('fform');
 const F = document.getElementById('form');
 
-const JABv = './テリトリアPV.mp4';
-const ENBv = './PicoCELA PV.mp4';
+
 const V = document.getElementById("video");
 V.poster = 'soccor_dribble_man.png'
 
@@ -38,7 +37,10 @@ JABtn.addEventListener('click', () => {
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
   //lang parameters
-  const OptMes = 'JAoptin.txt'
+  const OptMes = 'JAoptin.txt';
+  const CM = './テリトリアPV.mp4';
+  OPTinBtn.innerText = '同意してアンケートに回答';
+
   //timeText.innerHTML = time / 10;
 
   fetch(OptMes).then(function (response) {
@@ -52,9 +54,8 @@ JABtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
-  OPTinBtn.innerText = '同意してアンケートに回答';
   OPTinBtn.style.display = '';
-  V.src = JABv;
+  V.src = CM;
   V.style.display = 'none';
 
   QuitBtn.innerText = '接続';
@@ -72,6 +73,7 @@ ENBtn.addEventListener('click', () => {
   JABtn.style.display = 'none'
   //local lang param
   const OptMes = 'ENoptin.txt'
+  const CM = './PicoCELA PV.mp4';
   //timeText.innerHTML = time / 10;
 
   fetch(OptMes).then(function (response) {
@@ -87,7 +89,7 @@ ENBtn.addEventListener('click', () => {
 
   OPTinBtn.innerText = 'Accept the terms and fill the form';
   OPTinBtn.style.display = '';
-  V.src = ENBv;
+  V.src = CM;
   V.style.display = 'none';
 
   ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href=' + ENredir + '>here</a>';

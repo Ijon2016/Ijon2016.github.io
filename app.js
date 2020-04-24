@@ -19,6 +19,7 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
+const FF = document.getElementById('fform');
 const F = document.getElementById('form');
 
 const JABv = './テリトリアPV.mp4';
@@ -99,8 +100,10 @@ OPTinBtn.addEventListener('click', () => {
   F.style.display = '';
   V.style.display = '';
   V.play();
+  
+//  F.innerText = 'アンケート';
+  F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>'
 
-  F.innerText = 'アンケート';
   /*
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {

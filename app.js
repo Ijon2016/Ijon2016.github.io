@@ -177,4 +177,4 @@ OPTinBtn.addEventListener('click', () => {
         window.location.href = "https://picocela.com"
       }, 2500)
   })
-})
+}

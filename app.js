@@ -12,7 +12,7 @@ const ENBtn = document.getElementById('ENBtn');
 // var OptMes = 'ENoptin.txt';
 const Optin = document.getElementById('optin');
 
-//const OPTinBtn = document.getElementById('OPTinBtn');
+const OPTinBtn = document.getElementById('OPTinBtn');
 /*
 let time = 300
 var timeText = document.getElementById('js-time');

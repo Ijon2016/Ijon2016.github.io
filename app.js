@@ -4,7 +4,7 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-selLang.innerText = SelLangMes;
+const selLang.innerText = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 

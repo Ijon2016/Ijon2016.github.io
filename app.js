@@ -99,6 +99,8 @@ OPTinBtn.addEventListener('click', () => {
   F.style.display = '';
   V.style.display = '';
   V.play();
+
+  F.innerText = 'アンケート';
   /*
   //残り秒数を表示
   v.addEventListener("timeupdate", function () {

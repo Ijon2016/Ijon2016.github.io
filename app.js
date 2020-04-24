@@ -23,6 +23,7 @@ const F = document.getElementById('form');
 const JABv = './テリトリアPV.mp4';
 const ENBv = './PicoCELA PV.mp4';
 const V = document.getElementById("video");
+V.poster = 'soccor_dribble_man.png'
 
 const ConMes = document.getElementById('conMes');
 const JAredir = 'https://www.yomiuri.co.jp';
@@ -51,7 +52,6 @@ JABtn.addEventListener('click', () => {
   OPTinBtn.innerText = '同意してアンケートに回答';
   OPTinBtn.style.display = '';
   V.src = JABv;
-  V.poster = 'soccor_dribble_man.png'
   V.style.display = 'none';
 
   QuitBtn.innerText = '接続';
@@ -95,6 +95,7 @@ OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
   OPTinBtn.style.display = 'none'
+  F.style.display = '';
   V.style.display = '';
   V.play();
   /*

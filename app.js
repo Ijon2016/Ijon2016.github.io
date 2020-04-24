@@ -2,9 +2,9 @@
 let isPlaying = false
 
 // select lang
-const selLang = document.getElementById('selLang');
+var selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-selLang.innerHTML = SelLangMes;
+const selLang.innerHTML = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
@@ -18,7 +18,7 @@ let time = 300
 var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
-//const FF = document.getElementById('fform');
+//const FF = document.getElementById('form');
 
 /*
 const F = document.getElementById('form');

@@ -11,7 +11,7 @@ html {
 }
 .container {
   padding: 15px;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;
@@ -25,7 +25,7 @@ html {
 
 div#Message {
   padding: 16px;
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
   text-align: center;
   vertical-align: middle;

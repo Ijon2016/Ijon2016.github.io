@@ -4,7 +4,7 @@ let isPlaying = false
 // select lang
 var selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-const selLang.innerHTML = SelLangMes;
+selLang.innerHTML = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
@@ -20,10 +20,7 @@ timeText.innerHTML = (time / 10).toString();
 */
 //const FF = document.getElementById('form');
 
-/*
 const F = document.getElementById('form');
-
-
 const V = document.getElementById("video");
 V.poster = 'soccor_dribble_man.png'
 
@@ -99,9 +96,7 @@ ENBtn.addEventListener('click', () => {
 
   QuitBtn.innerText = 'connect';
 })
-*/
 
-/*
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
@@ -111,7 +106,7 @@ OPTinBtn.addEventListener('click', () => {
   V.play();
 
   F.innerHTML = 'アンケート';
-*/
+
   /*
     F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
     <select name="residence">
@@ -169,7 +164,6 @@ OPTinBtn.addEventListener('click', () => {
     }
   })
   */
-/*
 
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
@@ -179,5 +173,3 @@ OPTinBtn.addEventListener('click', () => {
       }, 2500)
   })
 })
-
-*/

@@ -105,7 +105,46 @@ OPTinBtn.addEventListener('click', () => {
   V.play();
   
 //  F.innerText = 'アンケート';
-  F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>'
+  F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
+  <select name="residence">
+                <option value='0'></option>
+                <option value='id'>インドネシア</option>
+                <option value='sg'>シンガポール</option>
+                <option value='th'>タイ</option>
+                <option value='ph'>フィリピン</option>
+                <option value='my'>マレーシア</option>
+                <option value='vn'>ベトナム</option>
+                <option value='mm'>ミャンマー</option>
+                <option value='kh'>カンボジア</option>
+                <option value='et1'>その他東南アジア</option>
+                <option value='jp'>日本</option>
+                <option value='cn'>中華人民共和国</option>
+                <option value='tw'>台湾</option>
+                <option value='hk'>香港</option>
+                <option value='mo'>マカオ</option>
+                <option value='kr'>大韓民国</option>
+                <option value='kp'>朝鮮民主主義人民共和国</option>
+                <option value='et2'>その他東アジア</option>
+                <option value='in'>インド</option>
+                <option value='np'>ネパール</option>
+                <option value='et3'>その他南アジア</option>
+                <option value='et4'>その他アジア</option>
+                <option value='us'>アメリカ</option>
+                <option value='ca'>カナダ</option>
+                <option value='et5'>その他北・中央・南アメリカ</option>
+                <option value='au'>オーストラリア</option>
+                <option value='nz'>ニュージーランド</option>
+                <option value='et6'>その他オセアニア</option>
+                <option value='gb'>イギリス</option>
+                <option value='fr'>フランス</option>
+                <option value='de'>ドイツ</option>
+                <option value='ch'>スイス</option>
+                <option value='es'>スペイン</option>
+                <option value='ru'>ロシア</option>
+                <option value='et7'>その他ヨーロッパ</option>
+                <option value='af'>アフリカ諸国</option>
+                <option value='et'>その他各国</option>
+            </select>'
 
   /*
   //残り秒数を表示

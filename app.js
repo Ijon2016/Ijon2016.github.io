@@ -19,6 +19,8 @@ var timeText = document.getElementById('js-time');
 timeText.innerHTML = (time / 10).toString();
 */
 //const FF = document.getElementById('fform');
+
+/*
 const F = document.getElementById('form');
 
 
@@ -97,7 +99,9 @@ ENBtn.addEventListener('click', () => {
 
   QuitBtn.innerText = 'connect';
 })
+*/
 
+/*
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
@@ -107,6 +111,7 @@ OPTinBtn.addEventListener('click', () => {
   V.play();
 
   F.innerHTML = 'アンケート';
+*/
   /*
     F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
     <select name="residence">
@@ -164,6 +169,7 @@ OPTinBtn.addEventListener('click', () => {
     }
   })
   */
+/*
 
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
@@ -174,3 +180,4 @@ OPTinBtn.addEventListener('click', () => {
   })
 })
 
+*/

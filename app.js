@@ -4,15 +4,15 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-selLang.innerText = SelLangMes;
+const selLang.innerText = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
 // set lang variables
-var OptMes = 'ENoptin.txt';
+// var OptMes = 'ENoptin.txt';
 const Optin = document.getElementById('optin');
 
-//const OPTinBtn = document.getElementById('OPTinBtn');
+const OPTinBtn = document.getElementById('OPTinBtn');
 /*
 let time = 300
 var timeText = document.getElementById('js-time');
@@ -33,11 +33,12 @@ const QuitBtn = document.getElementById('quit');
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
-  isPlayingM = true;
+  isPlaying = true;
   selLang.style.display = 'none';
   JABtn.style.display = 'none';
   ENBtn.style.display = 'none';
-  OptMes = 'JAoptin.txt'
+  //lang parameters
+  const OptMes = 'JAoptin.txt'
   //timeText.innerHTML = time / 10;
 
   fetch(OptMes).then(function (response) {
@@ -69,7 +70,8 @@ ENBtn.addEventListener('click', () => {
   selLang.style.display = 'none';
   ENBtn.style.display = 'none'
   JABtn.style.display = 'none'
-  OptMes = 'ENoptin.txt'
+  //local lang param
+  const OptMes = 'ENoptin.txt'
   //timeText.innerHTML = time / 10;
 
   fetch(OptMes).then(function (response) {

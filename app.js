@@ -4,36 +4,15 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください';
-//selLang.innerText = SelLangMes;
-selLang.innerHTML = SelLangMes;
-//= '言語を選択してください';
-//const JABtn = document.getElementById('JABtn');
-//const ENBtn = document.getElementById('ENBtn');
+//selLang.innerHTML = SelLangMes;
+window.onload = function() {
+  what();
+  function what(){
+      selLang.innerHTML = SelLangMes;
+  };
+const JABtn = document.getElementById('JABtn');
+const ENBtn = document.getElementById('ENBtn');
 
-// set lang variables
-// var OptMes = 'ENoptin.txt';
-//const Optin = document.getElementById('optin');
-//const OPTinBtn = document.getElementById('OPTinBtn');
-
-/*
-let time = 300
-var timeText = document.getElementById('js-time');
-timeText.innerHTML = (time / 10).toString();
-*/
-//const FF = document.getElementById('form');
-
-/*
-const F = document.getElementById('form');
-const V = document.getElementById("video");
-V.poster = 'soccor_dribble_man.png'
-
-const ConMes = document.getElementById('conMes');
-const JAredir = 'https://www.yomiuri.co.jp';
-const ENredir = 'https://www.asahi.com';
-const QuitBtn = document.getElementById('quit');
-*/
-
-/*
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
   isPlaying = true;
@@ -67,9 +46,7 @@ JABtn.addEventListener('click', () => {
   ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href=' + JAredir + '>ここ</a>をクリック';
   ConMes.style.display = 'none';
 })
-*/
 
-/*
 // Englishボタン
 ENBtn.addEventListener('click', () => {
   //  setGame()
@@ -103,9 +80,28 @@ ENBtn.addEventListener('click', () => {
 
   QuitBtn.innerText = 'connect';
 })
-*/
+
+// set lang variables
+var OptMes = 'ENoptin.txt';
+const Optin = document.getElementById('optin');
+const OPTinBtn = document.getElementById('OPTinBtn');
 
 /*
+let time = 300
+var timeText = document.getElementById('js-time');
+timeText.innerHTML = (time / 10).toString();
+*/
+//const FF = document.getElementById('form');
+
+const F = document.getElementById('form');
+const V = document.getElementById("video");
+V.poster = 'soccor_dribble_man.png'
+
+const ConMes = document.getElementById('conMes');
+const JAredir = 'https://www.yomiuri.co.jp';
+const ENredir = 'https://www.asahi.com';
+const QuitBtn = document.getElementById('quit');
+
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
@@ -115,7 +111,6 @@ OPTinBtn.addEventListener('click', () => {
   V.play();
 
   F.innerHTML = 'アンケート';
-*/
 
   /*
     F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
@@ -174,7 +169,7 @@ OPTinBtn.addEventListener('click', () => {
     }
   })
   */
-/*
+
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
     setTimeout(
@@ -183,4 +178,3 @@ OPTinBtn.addEventListener('click', () => {
       }, 2500)
   })
 })
-*/

@@ -2,9 +2,9 @@
 let isPlaying = false
 
 // select lang
-const selLang = document.getElementById('selLang');
+var selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください'
-selLang.innerText = SelLangMes;
+var selLang.innerText = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
 
@@ -38,7 +38,7 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none';
   //lang parameters
   const OptMes = 'JAoptin.txt';
-  const CM = './テリトリアPV.mp4';
+  CM = './テリトリアPV.mp4';
   OPTinBtn.innerText = '同意してアンケートに回答';
 
   //timeText.innerHTML = time / 10;

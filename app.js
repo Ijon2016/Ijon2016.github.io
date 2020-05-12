@@ -22,6 +22,7 @@ JABtn.addEventListener('click', () => {
   const CM = './テリトリアPV.mp4';
   const OPTinBtn = document.getElementById('OPTinBtn');
   OPTinBtn.innerText = '同意してアンケートに回答';
+  const JAredir = 'https://www.yomiuri.co.jp';
 
   //timeText.innerHTML = time / 10;
 
@@ -43,7 +44,7 @@ JABtn.addEventListener('click', () => {
   QuitBtn.innerText = '接続';
 
   const ConMes = document.getElementById('ConNW');
-  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href=' + JAredir + '>ここ</a>をクリック';
+  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.yomiuri.co.jp">ここ</a>をクリック';
   ConMes.style.display = 'none';
 })
 

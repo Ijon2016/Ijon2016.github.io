@@ -42,7 +42,8 @@ JABtn.addEventListener('click', () => {
 
   QuitBtn.innerText = '接続';
 
-  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href=' + JAredir + '>ここ</a>をクリック';
+  //ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href=' + JAredir + '>ここ</a>をクリック';
+  ConMes.innerHTML = 'test';
   ConMes.style.display = 'none';
 })
 
@@ -106,7 +107,7 @@ OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
   OPTinBtn.style.display = 'none';
-  F.style.display = '';
+  //F.style.display = '';
   V.style.display = '';
   V.play();
 

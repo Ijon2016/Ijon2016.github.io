@@ -20,7 +20,8 @@ JABtn.addEventListener('click', () => {
   //lang parameters
   const OptMes = 'JAoptin.txt';
   const CM = './テリトリアPV.mp4';
-  const OPTinBtn.innerText = '同意してアンケートに回答';
+  const OPTinBtn = document.getElementById('OPTinBtn');
+  OPTinBtn.innerText = '同意してアンケートに回答';
 
   //timeText.innerHTML = time / 10;
 

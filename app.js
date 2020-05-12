@@ -102,6 +102,7 @@ const JAredir = 'https://www.yomiuri.co.jp';
 const ENredir = 'https://www.asahi.com';
 const QuitBtn = document.getElementById('quit');
 
+/*
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
@@ -112,7 +113,6 @@ OPTinBtn.addEventListener('click', () => {
 
   F.innerHTML = 'アンケート';
 
-  /*
     F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
     <select name="residence">
                   <option value='0'></option>
@@ -153,7 +153,6 @@ OPTinBtn.addEventListener('click', () => {
                   <option value='af'>アフリカ諸国</option>
                   <option value='et'>その他各国</option>
               </select>'
-  */
 
   /*
   //残り秒数を表示

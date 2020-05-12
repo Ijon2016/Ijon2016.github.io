@@ -41,11 +41,11 @@ JABtn.addEventListener('click', () => {
   V.src = CM;
   V.style.display = 'none';
 
-  QuitBtn.innerText = '接続';
+  //QuitBtn.innerText = '接続';
 
-  const ConMes = document.getElementById('ConNW');
+  //const ConMes = document.getElementById('ConNW');
   //ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.yomiuri.co.jp">ここ</a>をクリック';
-  ConMes.style.display = 'none';
+  //ConMes.style.display = 'none';
 })
 
 // Englishボタン
@@ -77,10 +77,10 @@ ENBtn.addEventListener('click', () => {
   V.src = CM;
   V.style.display = 'none';
 
-  ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href=' + ENredir + '>here</a>';
-  ConMes.style.display = 'none';
+  //ConMes.innerHTML = 'Connected to the Internet.<br>If you are not automatically redirected, click <a href=' + ENredir + '>here</a>';
+  //ConMes.style.display = 'none';
 
-  QuitBtn.innerText = 'connect';
+  //QuitBtn.innerText = 'connect';
 })
 
 // set lang variables
@@ -99,7 +99,7 @@ timeText.innerHTML = (time / 10).toString();
 const V = document.getElementById("video");
 V.poster = 'soccer_dribble_man.png'
 
-const ConMes = document.getElementById('conMes');
+const ConMes = document.getElementById('conNW');
 const JAredir = 'https://www.yomiuri.co.jp';
 const ENredir = 'https://www.asahi.com';
 const QuitBtn = document.getElementById('quit');

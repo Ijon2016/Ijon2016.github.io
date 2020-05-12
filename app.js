@@ -93,7 +93,7 @@ timeText.innerHTML = (time / 10).toString();
 */
 //const FF = document.getElementById('form');
 
-const F = document.getElementById('form');
+//const F = document.getElementById('form');
 const V = document.getElementById("video");
 V.poster = 'soccer_dribble_man.png'
 
@@ -102,7 +102,6 @@ const JAredir = 'https://www.yomiuri.co.jp';
 const ENredir = 'https://www.asahi.com';
 const QuitBtn = document.getElementById('quit');
 
-/*
 OPTinBtn.addEventListener('click', () => {
 
   Optin.style.display = 'none';
@@ -111,6 +110,7 @@ OPTinBtn.addEventListener('click', () => {
   V.style.display = '';
   V.play();
 
+  /*
   F.innerHTML = 'アンケート';
 
     F.innerHTML = '<form name="form1"><select name="color1"><option value="red">赤</option><option value="yellow">黄</option><option value="blue">青</option></select></form>
@@ -153,6 +153,7 @@ OPTinBtn.addEventListener('click', () => {
                   <option value='af'>アフリカ諸国</option>
                   <option value='et'>その他各国</option>
               </select>'
+  */
 
   /*
   //残り秒数を表示
@@ -169,6 +170,7 @@ OPTinBtn.addEventListener('click', () => {
   })
   */
 
+  /*
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
     setTimeout(
@@ -176,4 +178,5 @@ OPTinBtn.addEventListener('click', () => {
         window.location.href = "https://picocela.com"
       }, 2500)
   })
+  */
 })

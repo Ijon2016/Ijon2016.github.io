@@ -43,9 +43,9 @@ JABtn.addEventListener('click', () => {
 
   QuitBtn.innerText = '接続';
 
-  const ConMes = document.getElementById('ConNW');
-  ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.yomiuri.co.jp">ここ</a>をクリック';
-  ConMes.style.display = 'none';
+  //const ConMes = document.getElementById('ConNW');
+  //ConMes.innerHTML = 'インターネットに接続されました。<br>自動でリダイレクトされない場合、<a href="https://www.yomiuri.co.jp">ここ</a>をクリック';
+  //ConMes.style.display = 'none';
 })
 
 // Englishボタン

@@ -170,7 +170,6 @@ OPTinBtn.addEventListener('click', () => {
   })
   */
 
-  /*
   V.addEventListener("ended", function () {
     ConMes.style.display = '';
     setTimeout(
@@ -178,5 +177,4 @@ OPTinBtn.addEventListener('click', () => {
         window.location.href = "https://picocela.com"
       }, 2500)
   })
-  */
 })

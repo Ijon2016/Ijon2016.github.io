@@ -4,15 +4,12 @@ let isPlaying = false
 // select lang
 const selLang = document.getElementById('selLang');
 const SelLangMes = '言語を選択してください';
-//selLang.innerHTML = SelLangMes;
-window.onload = function () {
-  what();
-  function what() {
-    selLang.innerHTML = SelLangMes;
-  };
-}
+selLang.innerHTML = SelLangMes;
 const JABtn = document.getElementById('JABtn');
 const ENBtn = document.getElementById('ENBtn');
+
+//Clear other lang buttons
+
 
 // 日本語ボタン
 JABtn.addEventListener('click', () => {
@@ -22,8 +19,8 @@ JABtn.addEventListener('click', () => {
   ENBtn.style.display = 'none';
   //lang parameters
   const OptMes = 'JAoptin.txt';
-  CM = './テリトリアPV.mp4';
-  OPTinBtn.innerText = '同意してアンケートに回答';
+  const CM = './テリトリアPV.mp4';
+  const OPTinBtn.innerText = '同意してアンケートに回答';
 
   //timeText.innerHTML = time / 10;
 
@@ -58,6 +55,8 @@ ENBtn.addEventListener('click', () => {
   //local lang param
   const OptMes = 'ENoptin.txt'
   const CM = './PicoCELA PV.mp4';
+  OPTinBtn.innerText = 'Accept the terms and fill the form';
+
   //timeText.innerHTML = time / 10;
 
   fetch(OptMes).then(function (response) {
@@ -71,7 +70,6 @@ ENBtn.addEventListener('click', () => {
     console.log('There has been a problem with your fetch operation: ', error.message);
   });
 
-  OPTinBtn.innerText = 'Accept the terms and fill the form';
   OPTinBtn.style.display = '';
   V.src = CM;
   V.style.display = 'none';

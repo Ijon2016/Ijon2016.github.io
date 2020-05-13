@@ -97,7 +97,7 @@ timeText.innerHTML = (time / 10).toString();
 
 //const F = document.getElementById('form');
 const V = document.getElementById("video");
-V.poster = 'soccer_dribble_man.png'
+V.poster = 'splash.png'
 
 const ConMes = document.getElementById('conNW');
 const JAredir = 'https://www.yomiuri.co.jp';
